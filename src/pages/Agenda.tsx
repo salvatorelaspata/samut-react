@@ -1,15 +1,22 @@
 import React from 'react'
-
-interface Props {
+import { motion } from 'framer-motion'
+interface AgendaProps {
 
 }
 
-const Agenda: React.FC<Props> = (props) => {
+const style: React.CSSProperties = { position: "absolute", top: "50%", left: "50%", marginLeft: "-220px" };
+
+const Agenda: React.FC<AgendaProps> = (props) => {
      return (
-          <div>
-               Agenda
-          </div>
+
+          <motion.div animate="enter" initial="exit" exit="exit">
+               <h1 style={style}>
+                    Aganda - coming soon...
+               </h1>
+          </motion.div>
      )
 }
+
+
 
 export default Agenda

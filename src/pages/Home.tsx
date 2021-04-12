@@ -1,19 +1,17 @@
 import React from 'react'
+import { motion } from 'framer-motion'
+import css from './Home.module.css';
 
-interface HomeProps {
+const Home = () => {
 
-}
-
-const style: React.CSSProperties = { position: "absolute", top: "50%", left: "50%", marginLeft: "-75px" };
-
-const Home: React.FC<HomeProps> = (props) => {
      return (
-          <h1 style={style}>
-               Samut 2.0
-          </h1>
+
+          <motion.div animate="enter" initial="exit" exit="exit">
+               <h1 className={css.title}>
+                    SAMOT <span className={css.version}>2.0</span>
+               </h1>
+          </motion.div>
      )
 }
-
-
 
 export default Home
